@@ -5,7 +5,7 @@
  */
 package com.apress.azm.UserRegistrationSystem.repository;
 
-import com.apress.azm.UserRegistrationSystem.dto.UserDTO;
+import com.apress.azm.UserRegistrationSystem.dto.UserInfo;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -15,12 +15,9 @@ import org.springframework.stereotype.Repository;
  * @author azm
  */
 @Repository
-public interface UserRepository extends MongoRepository<UserDTO, String>
+public interface UserInfoRepository extends MongoRepository<UserInfo, String>
 {
 
-    @Query(value = "{'name' : ?0}", fields = "{'name': 1, _id : 0}")
-    UserDTO findByName (String name);
-
-    @Query(value = "{'_id' : ?0}")
-    UserDTO findByID (String id);
+    @Query(value = "{'userName' : ?0}", fields = "{'userName': 1,'password': 1, 'enabled': 1,'role': 1} ")
+    UserInfo findByName (String name);
 }
