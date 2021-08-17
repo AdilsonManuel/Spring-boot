@@ -43,7 +43,7 @@ public class SpringSecurityConfiguration_Database extends WebSecurityConfigurerA
     @Override
     protected void configure (AuthenticationManagerBuilder auth) throws Exception
     {
-        System.out.println (" -> "+userInfoRepository.findByName ("user"));
+//        System.out.println (" -> "+userInfoRepository.findByName ("user"));
         auth.userDetailsService (userInfoDetailsService);
     }
 
