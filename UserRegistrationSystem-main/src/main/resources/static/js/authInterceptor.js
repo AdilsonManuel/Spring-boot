@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 app.factory('AuthInterceptor', [function () {
-        return {
-            'request': function (config) {
-                config.headers = config.headers || {};
-                var encodedString = btoa("admin:password");
-                config.headers.Authorization = 'Basic ' + encodedString;
-                return config;
-            }
-        };
-    }]);
+    return {
+        'request': function (config) {
+            config.headers = config.headers || {};
+            var encodedString = btoa("admin:password");
+            config.headers.Authorization = 'Basic ' + encodedString;
+            return config;
+        }
+    };
+}]);

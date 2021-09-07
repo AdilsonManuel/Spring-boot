@@ -17,6 +17,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 
 /**
  *
@@ -30,7 +31,7 @@ public class SpringSecurityConfiguration_Database extends WebSecurityConfigurerA
 
     @Autowired
     private UserInfoDetailsService userInfoDetailsService;
-    
+
     @Autowired
     private UserInfoRepository userInfoRepository;
 
@@ -61,6 +62,14 @@ public class SpringSecurityConfiguration_Database extends WebSecurityConfigurerA
                 .and ()
                 .csrf ()
                 .disable ();
+
+        http.httpBasic ().realmName ("User Registration System")
+                .and ()
+                .authorizeRequests ()
+                .antMatchers ("/login/login.html", "/template/home.html", "/").permitAll ()
+                .anyRequest ().authenticated ()
+                .and ()
+                .csrf ().csrfTokenRepository (CookieCsrfTokenRepository.withHttpOnlyFalse ());
     }
 
 }
