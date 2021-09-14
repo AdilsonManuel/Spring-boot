@@ -1,0 +1,12 @@
+com\apress\azm\UserRegistrationSystem\filter\CustomAuthorizationFilter.class
+com\apress\azm\UserRegistrationSystem\DTO\UserDTO.class
+com\apress\azm\UserRegistrationSystem\api\UserController.class
+com\apress\azm\UserRegistrationSystem\repository\UserRepository.class
+com\apress\azm\UserRegistrationSystem\service\UserServiceImplementation.class
+com\apress\azm\UserRegistrationSystem\api\RoleTOUserForm.class
+com\apress\azm\UserRegistrationSystem\filter\CustomAuthenticationFilter.class
+com\apress\azm\UserRegistrationSystem\security\SecurityConfig.class
+com\apress\azm\UserRegistrationSystem\repository\RoleRepository.class
+com\apress\azm\UserRegistrationSystem\service\UserService.class
+com\apress\azm\UserRegistrationSystem\UserRegistrationSystemApplication.class
+com\apress\azm\UserRegistrationSystem\DTO\RoleDTO.class
