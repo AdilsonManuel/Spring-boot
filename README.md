@@ -2,6 +2,7 @@
 * [Spring Boot](https://spring.io/projects/spring-boot)
 * [Java](https://adoptium.net/?variant=openjdk11)
 * [MongoDB](https://www.mongodb.com/)
+* [PostgreSQL](https://www.postgresql.org/)
 * [JsonWebToken](https://jwt.io/)
 * [Postman](https://www.postman.com/)
 
